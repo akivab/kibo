@@ -130,7 +130,7 @@ const playAudio = () => {
     // Create an audio element
 
 // Set the audio source
-    audio.src = "/ambient.mp3";
+    audio.src = "ambient.mp3";
 
 // Set the volume level to 0.5 (half the maximum volume)
     audio.volume = 0.2;
