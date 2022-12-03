@@ -75,7 +75,7 @@ function speak(text) {
     const element = document.getElementById('listening-state');
     const spokenText = text.replace('\\n', ' ');
     const utterance = new SpeechSynthesisUtterance(spokenText)
-    element.innerText = `Speaking: ${spokenText}`;
+    element.innerText = `Kibo says: "${spokenText}"...`;
     utterance.addEventListener('end', () => {
         console.log(`Restarting...`);
         startRecognizer();
