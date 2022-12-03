@@ -59,7 +59,7 @@ const requestOpenAI = (prompt) => {
     })
         .then(res => res.text())
         .then(res => {
-            speak(res)
+            speak(res.replace(/^[^\n]+\n\n/,""))
         })
         .catch(error => {
             // Handle any errors that occurred
