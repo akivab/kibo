@@ -200,7 +200,7 @@ const pauseAudio = () => {
 
 window.onload = () => {
     if (!speechSynthesis) {
-        alert("This browser doesn't support speech synthesis, try on Chrome for Desktop!")
+        alert("This browser doesn't support speech synthesis, try on Chrome for Desktop to hear Kibo speak!")
     }
     setupBubbles();
     setupAskQuestionButton()
