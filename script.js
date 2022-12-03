@@ -131,8 +131,7 @@ function startRecognizer(firstTime) {
 }
 const setupAskQuestionButton = () => {
     const button = document.getElementById('ask-question');
-
-    button.addEventListener('click', () => {
+    const handleClick = () => {
         if (isSpeakingWithKibo) {
             isSpeakingWithKibo = false;
             speechSynthesis.cancel();
@@ -143,6 +142,12 @@ const setupAskQuestionButton = () => {
             startRecognizer(true);
             button.innerText = "Pause with Kibo"
         }
+    };
+    button.addEventListener('click', () => {
+        handleClick()
+    });
+    button.addEventListener('touchend', () => {
+        handleClick();
     });
 }
 
