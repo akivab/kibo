@@ -188,3 +188,24 @@ img#sound-off, img#sound-on {
     width: 100%;
     height: 100%;
 }
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px #FF00FF;
+    }
+    50% {
+        box-shadow: 0 0 20px #FF00FF;
+    }
+    100% {
+        box-shadow: 0 0 10px #FF00FF;
+    }
+}
+
+.glowing {
+    animation: glow 2s infinite;
+    border-radius: 32px;
+}
+
+
+
+
