@@ -73,8 +73,9 @@ function speak(text) {
         return;
     }
     const element = document.getElementById('listening-state');
-    element.innerText = "Speaking...";
-    const utterance = new SpeechSynthesisUtterance(text.replace('\\n', ' '))
+    const spokenText = text.replace('\\n', ' ');
+    const utterance = new SpeechSynthesisUtterance(spokenText)
+    element.innerText = `Speaking: ${spokenText}`;
     utterance.addEventListener('end', () => {
         console.log(`Restarting...`);
         startRecognizer();
